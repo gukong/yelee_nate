@@ -1,0 +1,52 @@
+<hr>
+<br>
+<%- list_categories({depth: 1}) %>
+
+<p class="count"></p>
+
+<div class="tags">
+    <%- tagcloud({
+        min_font: 16, 
+        max_font: 35, 
+        amount: 999, 
+        color: true, 
+        start_color: 'gray', 
+        end_color: 'black',
+    }) %>
+</div>
+<style>
+    .category-list li{
+        margin: 0 1em .5em 0;
+        padding: 4px;
+        font-size: 1.2rem;
+    }
+    .category-list a { color: gray; }
+    .category-list-item:hover a {
+        color: gray;
+        text-decoration: none;
+    }
+    .category-list-count {
+        margin-left: 2px;
+        font-size: .9rem;
+    }
+    .article-entry ul li:before{ display: none; }
+    .article-inner { text-align: center; }
+    .tags {
+        max-width: 42em;
+        margin: 2em auto;
+        margin-top: 0em;
+    }
+    .tags a {
+        margin-right: 1em;
+        line-height: 65px;
+        white-space: nowrap;
+        transition: border-bottom .5s;
+    }
+    .tags a:hover {
+        text-decoration: none;
+    }
+    #count > span {
+        margin: auto .2em;
+        font-weight: bold;
+    }
+</style>
