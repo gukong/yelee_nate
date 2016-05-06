@@ -145,6 +145,10 @@ search_box: false
 # Animation in Homepage and Loading avatar
 animate: true
 
+# 指定唯一的动画
+# 参考值 pulse, fadeIn,fadeInRight, flipInX, lightSpeedIn,rotateInUpLeft, slideInUp,zoomIn
+only_animate: pulse
+
 # Load jQuery UI to style tooltips
 # 工具提示框样式美化
 jquery_ui: false
