@@ -73,20 +73,19 @@
                 <%if(theme.tagcloud){%>
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud" style="position: relative">
-                        <p style="position: relative;float: left;width: 100%;"> 标签 </p>
                         <%- list_tags({
                             show_count: false,
                             style: 'list',
-                            separator: ''
+                            separator: ',',
+                            is_menu: true
                         }) %>
-                        </br>
-                        <p style="position: relative;float: left;width: 100%;"> 分类 </p>
                         </br>
                         <%- list_categories({
                           show_count: false,
                           class: 'article-category',
                           separator: '',
-                          style: 'list'
+                          style: 'list',
+                          is_menu: true
                         }) %>
                     </div>
 

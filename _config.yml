@@ -147,7 +147,7 @@ animate: true
 
 # 指定唯一的动画
 # 参考值 pulse, fadeIn,fadeInRight, flipInX, lightSpeedIn,rotateInUpLeft, slideInUp,zoomIn
-only_animate: pulse
+only_animate: 'pulse'
 
 # Load jQuery UI to style tooltips
 # 工具提示框样式美化
