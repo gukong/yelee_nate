@@ -73,20 +73,30 @@
                 <%if(theme.tagcloud){%>
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud" style="position: relative">
-                        <%- list_tags({
+                        <% var result = list_tags({
                             show_count: false,
                             style: 'list',
                             separator: ',',
                             is_menu: true
-                        }) %>
+                        }) 
+                            if (result.match('</a>')) {
+                                result = '<p style="position: relative;float: left;width: 100%;"> 标签 </p>' + result;
+                            }
+                        %>
+                        <%- result %>
                         </br>
-                        <%- list_categories({
+                        <% var result = list_categories({
                           show_count: false,
                           class: 'article-category',
                           separator: '',
                           style: 'list',
                           is_menu: true
-                        }) %>
+                        }) 
+                            if (result.match('</a>')) {
+                                result = '<p style="position: relative;float: left;width: 100%;"> 分类 </p>' + result;
+                            }
+                        %>
+                        <%- result %>
                     </div>
 
                     <nav class="header-nav">
